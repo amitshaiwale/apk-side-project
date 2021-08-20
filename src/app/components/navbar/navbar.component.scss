@@ -1,0 +1,37 @@
+.apk-nav {
+    margin-bottom: 30px;
+}
+
+li {
+    list-style-type: none;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+// 261 * 106
+img {
+    width: 87px;
+    height: 35px;
+}
+
+mat-toolbar {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Nunito';
+    font-weight: bolder;
+    background-color: transparent;
+}
+
+mat-toolbar> * {
+    flex: 1;
+}
+
+header {
+    text-align: center;
+}
+
+header:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "apk-foods"
+  },
+  "targets": {
+    "apk-foods": {
+      "hosting": {
+        "apk-foods": [
+          "apk-foods"
+        ]
+      }
+    }
+  }
+}
