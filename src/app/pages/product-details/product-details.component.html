@@ -19,7 +19,7 @@
                 <section>
                     <mat-form-field appearance="fill">
                         <mat-label>kg</mat-label>
-                        <mat-select>
+                        <mat-select [(value)]="selectedValue" (selectionChange)="changeInSelection($event)">
                           <mat-option *ngFor="let n of [1,2,3,4,5]" [value]="n">
                             {{n}}
                           </mat-option>
@@ -27,7 +27,8 @@
                       </mat-form-field>
                 </section>
                 <div>
-                    <button class="buy-cta" mat-raised-button [class.mat-elevation-z8]=true color="primary">to Cart</button>
+                    <!-- <button (click)="openSnackBar('to the cart 🍚')" class="buy-cta" mat-raised-button [class.mat-elevation-z8]=true color="primary">to Cart</button> -->
+                    <button (click)="openSnackBar('to the cart 🍚')" class="buy-cta" mat-raised-button [class.mat-elevation-z8]=true color="primary">BUY</button>
                 </div>
             </div>
         </section>

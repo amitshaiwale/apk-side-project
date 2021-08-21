@@ -15,6 +15,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSelectModule } from '@angular/material/select';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ApkCheckoutComponent } from './pages/apk-checkout/apk-checkout.component';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,8 @@ import { MatSelectModule } from '@angular/material/select';
     ApkProductsComponent,
     ApkCardComponent,
     NavbarComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    ApkCheckoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +38,9 @@ import { MatSelectModule } from '@angular/material/select';
     MatCardModule,
     MatListModule,
     MatToolbarModule,
-    MatSelectModule
+    MatSelectModule,
+    MatSnackBarModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

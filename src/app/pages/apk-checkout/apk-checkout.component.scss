@@ -1,0 +1,79 @@
+@use '~@angular/material' as mat;
+
+h2,
+h4 {
+    font-family: "Nunito";
+    padding: 0px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.checkout-form-section {
+    display: flex;
+    font-family: 'Nunito';
+    align-items: center;
+    &__checkout-form {
+        padding: 0px 10px;
+        min-width: 150px;
+        max-width: 500px;
+        width: 100%;
+        flex: 1;
+    }
+
+    &__article {
+        background-color: #a9a9b4;
+        border-radius: 20px;
+        color: white;
+        text-align: left;
+        flex: 1;
+        padding: 5px 10px;
+    }
+
+    &__article > h4 {
+        font-size: 20px;
+        line-height: 1.6rem;
+        padding: 10px 20px;
+    }
+}
+
+.checkout-full-width {
+    width: 100%;
+}
+
+::ng-deep .mat-form-field-underline {
+    display: none;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+    border-radius: 10px !important;
+    font-family: "Nunito";
+}
+
+button {
+    font-family: "Nunito";
+}
+
+::ng-deep .mat-form-field-wrapper:focus {
+    border: 1px solid black;
+    @include mat.elevation(8);
+}
+
+::ng-deep .mat-form-field:focus {
+    border: 1px solid black;
+    @include mat.elevation(8);  
+}
+
+@media screen and (max-width: 560px) {
+    .checkout-form-section {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        &__checkout-form {
+            margin-bottom: 30px;
+        }
+    }
+}
