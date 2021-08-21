@@ -63,6 +63,16 @@
     }
 }
 
+.qty-price{
+    display: flex;
+    align-items: center;
+    &__price {
+        flex: 1;
+        text-align: right;
+        font-weight: bolder;
+    }
+}
+
 img {
     border-radius: 20px;
     width: 708px;

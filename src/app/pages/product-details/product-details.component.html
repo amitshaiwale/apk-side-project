@@ -7,16 +7,19 @@
         <section class="apk-product-details__article__sectioni">
             <div>
                 <h2>
-                    Amazing Transducers<br>
-                    Woofers<br>
-                    Low Resonance Enclosure Design<br>
-                    Noise Reduction Technology<br>
+                    Crispy<br>
+                    Spicy<br>
+                    No Artificial Color<br>
+                    Shelf Life around 3 months<br>
                 </h2>
-                <i>💡: For Single product, show "BUY" button instead of "to Cart" button
+                <i>
+                    This is a hand-made with ♥ and all safety care.
+                </i>
+                <!-- <i>💡: For Single product, show "BUY" button instead of "to Cart" button
                     <br>
                     For Multiple products, show "to Cart button" and then checkout page
-                </i>
-                <section>
+                </i> -->
+                <section class="qty-price">
                     <mat-form-field appearance="fill">
                         <mat-label>kg</mat-label>
                         <mat-select [(value)]="selectedValue" (selectionChange)="changeInSelection($event)">
@@ -25,6 +28,11 @@
                             </mat-option>
                         </mat-select>
                     </mat-form-field>
+                    <div class="qty-price__price">
+                        <p>
+                            ₹ 3,00
+                        </p>
+                    </div>
                 </section>
                 <div>
                     <!-- <button (click)="openSnackBar('to the cart 🍚')" class="buy-cta" mat-raised-button [class.mat-elevation-z8]=true color="primary">to Cart</button> -->
