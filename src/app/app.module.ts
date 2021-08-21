@@ -20,6 +20,7 @@ import { ApkCheckoutComponent } from './pages/apk-checkout/apk-checkout.componen
 import { MatInputModule } from '@angular/material/input';
 import { ProductsService } from './services/products.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatSnackBarModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatExpansionModule
   ],
   providers: [ProductsService],
   bootstrap: [AppComponent]

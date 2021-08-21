@@ -15,32 +15,55 @@ h2 {
 .checkout-form-section {
     width: 100%;
     display: flex;
-    font-family: 'Nunito';
-    align-items: center;
+    font-family: "Nunito";
+    // align-items: center;
     &__checkout-form {
         padding: 0px 10px;
         width: 100%;
-        flex: 1 ;
+        flex: 1;
     }
 
     &__article {
-        background-color: #a9a9b4;
-        border-radius: 20px;
-        color: white;
-        text-align: left;
+        // background-color: #a9a9b4;
+        // border-radius: 20px;
+        // color: white;
+        // text-align: left;
         flex: 1;
-        padding: 5px 10px;
+        // padding: 5px 10px;
+        &__order-summary {
+            margin-bottom: 30px;
+        }
     }
 
-    &__article > h4 {
-        font-size: 20px;
-        line-height: 1.6rem;
-        padding: 10px 20px;
-    }
+    // &__article > h4 {
+    //     font-size: 20px;
+    //     line-height: 1.6rem;
+    //     padding: 10px 20px;
+    // }
 }
 
 .checkout-full-width {
     width: 100%;
+}
+
+.item {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.item>h4 {
+    flex: 1;
+}
+
+.item-price {
+    order: 2;
+    flex: 1;
+    text-align: right;
+}
+
+mat-card-title, mat-card-content {
+    font-family: 'Nunito';
 }
 
 ::ng-deep .mat-form-field-underline {
@@ -56,6 +79,10 @@ button {
     font-family: "Nunito";
 }
 
+button:disabled {
+    @include mat.elevation(0);
+}
+
 ::ng-deep .mat-form-field-wrapper:focus {
     border: 1px solid black;
     @include mat.elevation(8);
@@ -63,7 +90,7 @@ button {
 
 ::ng-deep .mat-form-field:focus {
     border: 1px solid black;
-    @include mat.elevation(8);  
+    @include mat.elevation(8);
 }
 
 @media screen and (max-width: 560px) {

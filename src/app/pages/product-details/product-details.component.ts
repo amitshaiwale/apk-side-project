@@ -25,8 +25,8 @@ export class ProductDetailsComponent implements OnInit {
     console.log(event.value);
   }
 
-  openSnackBar(msg: string, action = "✖") {
-    this._snackBar.open(msg, action, { duration: 1500 });
+  openSnackBar(action = "✖") {
+    this._snackBar.open(`${this.selectedValue} kg selected 🍚`, action, { duration: 1500 });
     this._router.navigateByUrl('/checkout');
   }
 

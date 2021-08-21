@@ -57,18 +57,53 @@
                 </mat-error>
             </mat-form-field>
 
-            <button [disabled]="formGroup.invalid" (click)="onSubmit()" class="buy-cta" mat-raised-button [class.mat-elevation-z8]=true color="primary">Proceed to
+            <button [disabled]="formGroup.invalid" (click)="onSubmit()" class="buy-cta" mat-raised-button
+                [class.mat-elevation-z8]=true color="primary">Proceed to
                 Finish</button>
         </form>
         <article class="checkout-form-section__article">
-            <h4>
-                TODO: Provide a way to cancel the order. And also, order id.<br>
-                <mat-icon aria-hidden="false" aria-label="Example home icon">priority_high</mat-icon>
-                Note — This page will not navigate you to payment checkout page.<br>
-                Clicking on "Proceed to Finish" says you have placed the order.<br>
-                As of now we only accept payment made through COD mode or GPay ( in-person ).
-                We are working on this space to make payment process for our customers smooth and easy. 💪
-            </h4>
+            <div class="checkout-form-section__article__order-summary">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>🍚 Your Order Summary</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <div class="item block-row order-items">
+                            <h4>Product Name</h4>
+                            <h4 class="item-price">₹ 3,00</h4>
+                        </div>
+                        <div class="item block-row order-items">
+                            <small>Delivery charges</small>
+                            <h4 class="item-price">₹ 30</h4>
+                        </div>
+                        <div class="item block-row order-items">
+                            <h4>Total</h4>
+                            <h4 class="item-price">₹ 3,30</h4>
+                        </div>
+                      </mat-card-content>
+                </mat-card>
+            </div>
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <mat-icon aria-hidden="false" aria-label="Example home icon">priority_high</mat-icon>
+                            Note
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            Read before proceeding
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <h4>
+                        TODO: Provide a way to cancel the order. And also, order id.<br>
+
+                        Note — This page will not navigate you to payment checkout page.<br>
+                        Clicking on "Proceed to Finish" says you have placed the order.<br>
+                        As of now we only accept payment made through COD mode or GPay ( in-person ).
+                        We are working on this space to make payment process for our customers smooth and easy. 💪
+                    </h4>
+                </mat-expansion-panel>
+            </mat-accordion>
         </article>
     </section>
 </div>
