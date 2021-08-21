@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {MatSnackBar} from '@angular/material/snack-bar';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 export class ProductDetailsComponent implements OnInit {
 
   // public defaultValue = 1;
-  selectedValue: string = "";
+  selectedValue: number = 1;;
 
   price = 100.0;
   qty = 1;
@@ -24,8 +25,8 @@ export class ProductDetailsComponent implements OnInit {
     console.log(event.value);
   }
 
-  openSnackBar(msg: string, action="✖") {
-    this._snackBar.open(msg, action);
+  openSnackBar(msg: string, action = "✖") {
+    this._snackBar.open(msg, action, { duration: 1500 });
     this._router.navigateByUrl('/checkout');
   }
 

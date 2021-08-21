@@ -10,6 +10,7 @@
     // background-color: #f0f2f5;
     &__list-wrapper {
         display: flex;
+        flex-direction: row;
         // max-width: 400px;
     }
     &__prod-desc {

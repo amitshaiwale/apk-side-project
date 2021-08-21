@@ -18,6 +18,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ApkCheckoutComponent } from './pages/apk-checkout/apk-checkout.component';
 import { MatInputModule } from '@angular/material/input';
+import { ProductsService } from './services/products.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -40,9 +42,11 @@ import { MatInputModule } from '@angular/material/input';
     MatToolbarModule,
     MatSelectModule,
     MatSnackBarModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

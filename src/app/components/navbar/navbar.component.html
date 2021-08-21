@@ -1,6 +1,6 @@
 <mat-toolbar>
     <header routerLink="/">APK.</header>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <button *ngIf="showBag" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
         <mat-icon>shopping_bag</mat-icon>
     </button>
 </mat-toolbar>
