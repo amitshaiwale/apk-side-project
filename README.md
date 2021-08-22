@@ -11,3 +11,7 @@
 # Dev knwoledge
     1. ng build --prod
     2. ng deploy
+
+# Dev—Todo
+    <model-viewer>
+    pinch to zoom in/out using *https://ivylab.space/pinch-zoom*

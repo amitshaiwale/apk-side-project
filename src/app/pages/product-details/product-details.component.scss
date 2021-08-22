@@ -120,3 +120,18 @@ mat-form-field {
         height: 233px;
     }
 }
+
+@media screen and (min-width: 561px) and (max-width: 720px) {
+    .apk-product-details {
+        &__article {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    img {
+        // max-width: 100%;
+        width: 531px;
+        height: 360px;
+    }
+}
