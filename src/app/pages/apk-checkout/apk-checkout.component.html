@@ -10,28 +10,28 @@
     <section class="checkout-form-section">
         <form class="checkout-form-section__checkout-form" [formGroup]="formGroup">
             <mat-form-field class="checkout-full-width" appearance="fill">
-                <input matInput placeholder="Full Name" formControlName="name">
+                <input matInput placeholder="📛 Full Name" formControlName="name">
                 <mat-error *ngIf="name?.invalid">
                     We need to know your know your name.
                 </mat-error>
             </mat-form-field>
 
             <mat-form-field class="checkout-full-width" appearance="fill">
-                <input matInput placeholder="Email address — optional" formControlName="email">
+                <input matInput placeholder="📧 Email address — optional" formControlName="email">
                 <mat-error *ngIf="email?.invalid">
                     doesnt look like an email
                 </mat-error>
             </mat-form-field>
 
             <mat-form-field class="checkout-full-width" appearance="fill">
-                <textarea matInput placeholder="Address with Landmark" formControlName="address"></textarea>
+                <textarea matInput placeholder="🏡 Address with Landmark" formControlName="address"></textarea>
                 <mat-error *ngIf="address?.invalid">
                     Tell us your adress for delivery
                 </mat-error>
             </mat-form-field>
 
             <mat-form-field class="checkout-full-width" appearance="fill">
-                <input matInput placeholder="Pincode" formControlName="pincode">
+                <input matInput placeholder="📍 Pincode" formControlName="pincode">
                 <mat-error *ngIf="pincode?.errors?.maxLength">
                     Does this pincode belong to Mars ?
                 </mat-error>
@@ -41,11 +41,11 @@
             </mat-form-field>
 
             <mat-form-field class="checkout-full-width" appearance="fill">
-                <input matInput placeholder="City" formControlName="city">
+                <input [attr.disabled]="true" matInput placeholder="City" formControlName="city">
             </mat-form-field>
 
             <mat-form-field class="checkout-full-width" appearance="fill">
-                <input matInput placeholder="+91 ( Phone number )" formControlName="phone">
+                <input matInput placeholder="📞 +91 ( Phone number )" formControlName="phone">
                 <mat-error *ngIf="phone?.errors?.maxLength && phone?.touched">
                     Incorrect number
                 </mat-error>
@@ -58,7 +58,7 @@
             </mat-form-field>
 
             <button [disabled]="formGroup.invalid" (click)="onSubmit()" class="buy-cta" mat-raised-button
-                [class.mat-elevation-z8]=true color="primary">Proceed to
+                [class.mat-elevation-z8]=true color="primary">✔ Proceed to
                 Finish</button>
         </form>
         <article class="checkout-form-section__article">

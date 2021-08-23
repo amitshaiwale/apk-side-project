@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { ApkDialogComponent } from 'src/app/components/apk-dialog/apk-dialog.component';
 import { PriceCalculationsService } from 'src/app/services/price-calculations.service';
@@ -22,7 +22,7 @@ export class ApkCheckoutComponent implements OnInit {
       email: ['', [Validators.email]],
       address: ['', [Validators.required]],
       pincode: ['', [Validators.required, Validators.maxLength(6)]],
-      city: 'Pune',
+      city: new FormControl({value: '🏙  Pune', disabled: true}),
       phone: ['', [Validators.required, Validators.maxLength(10)]]
     })
 
