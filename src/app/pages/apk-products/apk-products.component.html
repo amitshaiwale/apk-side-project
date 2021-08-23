@@ -1,9 +1,21 @@
 <div class="apk-product">
-    <div class="apk-product__list-wrapper">
-        <a routerLink="/products" *ngFor="let item of products">
-            <app-apk-card></app-apk-card>
+    <div class="apk-product__list-wrapper" *ngIf="remoteProducts | async; else spinner">
+        <a routerLink="/products" *ngFor="let item of remoteProducts | async">
+            <app-apk-card 
+                [productName]=item.name 
+                [productDesc]=item.description 
+                [availability]=item.availability
+                [productPrice]=item.price>
+            </app-apk-card>
         </a>
     </div>
+    <ng-template #spinner>
+        <mat-progress-spinner
+        class="progress-spinner"
+        [color]="'primary'"
+        [mode]="'indeterminate'">
+    </mat-progress-spinner>
+    </ng-template>
     <div class="apk-product__prod-desc">
         All items are made to order.<br>
         We appreciate your co-operation. Colors in picture may slighlty vary.

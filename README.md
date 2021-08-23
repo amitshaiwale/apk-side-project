@@ -15,3 +15,4 @@
 # Dev—Todo
     <model-viewer>
     pinch to zoom in/out using *https://ivylab.space/pinch-zoom*
+    Strapi as CMS : https://strapi.io/documentation/developer-docs/latest/getting-started/introduction.html

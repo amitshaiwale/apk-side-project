@@ -1,5 +1,5 @@
 export const environment = {
-  production: false,
+  production: true,
   firebaseConfig : {
     apiKey: "AIzaSyDg8H3jDJYAMZIpillzszOyrQgA-9M5Iok",
     authDomain: "apk-foods.firebaseapp.com",
