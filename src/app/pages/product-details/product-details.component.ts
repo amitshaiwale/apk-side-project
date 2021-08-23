@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { PriceCalculationsService } from 'src/app/services/price-calculations.service';
 
 @Component({
   selector: 'app-product-details',
@@ -10,19 +11,22 @@ import { Router } from '@angular/router';
 })
 export class ProductDetailsComponent implements OnInit {
 
-  // public defaultValue = 1;
+  pricePerKg: number = 100;
+  calculatedPricePerKg: number = this.pricePerKg;
   selectedValue: number = 1;;
 
   price = 100.0;
   qty = 1;
 
-  constructor(private _snackBar: MatSnackBar, private _router: Router) { }
+  constructor(private _snackBar: MatSnackBar, private _router: Router, private _priceCalcService: PriceCalculationsService) { }
 
   ngOnInit(): void {
+    // this._priceCalcService.priceBehaviorSubject.subscribe(console.log);
   }
 
   changeInSelection(event: any) {
-    console.log(event.value);
+    this.calculatedPricePerKg = event.value * this.pricePerKg;
+    this._priceCalcService.priceBehaviorSubject.next(this.calculatedPricePerKg);
   }
 
   openSnackBar(action = "✖") {

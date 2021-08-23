@@ -20,7 +20,9 @@ import { ApkCheckoutComponent } from './pages/apk-checkout/apk-checkout.componen
 import { MatInputModule } from '@angular/material/input';
 import { ProductsService } from './services/products.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {MatExpansionModule} from '@angular/material/expansion';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ApkDialogComponent } from './components/apk-dialog/apk-dialog.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     NavbarComponent,
     ProductDetailsComponent,
     ApkCheckoutComponent,
+    ApkDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatDialogModule
   ],
   providers: [ProductsService],
   bootstrap: [AppComponent]

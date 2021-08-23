@@ -7,8 +7,6 @@ export class ProductsService {
 
   products = [
     { id: 1, name: "ProdOne" },
-    // { id: 2, name: "ProdTwo" },
-    // { id: 3, name: "ProodThree" },
   ]
 
   getAllProducts() {

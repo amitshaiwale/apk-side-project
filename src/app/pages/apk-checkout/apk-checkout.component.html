@@ -70,17 +70,17 @@
                     <mat-card-content>
                         <div class="item block-row order-items">
                             <h4>Product Name</h4>
-                            <h4 class="item-price">₹ 3,00</h4>
+                            <h4 class="item-price">₹ {{calculatedPrice}}</h4>
                         </div>
                         <div class="item block-row order-items">
                             <small>Delivery charges</small>
-                            <h4 class="item-price">₹ 30</h4>
+                            <h4 class="item-price">₹ {{deliveryCharges}}</h4>
                         </div>
                         <div class="item block-row order-items">
                             <h4>Total</h4>
-                            <h4 class="item-price">₹ 3,30</h4>
+                            <h4 class="item-price">₹ {{calculatedPrice + deliveryCharges}}</h4>
                         </div>
-                      </mat-card-content>
+                    </mat-card-content>
                 </mat-card>
             </div>
             <mat-accordion>

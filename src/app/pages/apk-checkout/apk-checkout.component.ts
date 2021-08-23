@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import { MatDialog } from '@angular/material/dialog';
+import { ApkDialogComponent } from 'src/app/components/apk-dialog/apk-dialog.component';
+import { PriceCalculationsService } from 'src/app/services/price-calculations.service';
 @Component({
   selector: 'app-apk-checkout',
   templateUrl: './apk-checkout.component.html',
@@ -9,8 +11,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ApkCheckoutComponent implements OnInit {
 
   formGroup: FormGroup;
+  calculatedPrice: number;
+  deliveryCharges: number = 30;
 
-  constructor(private _formBuilder: FormBuilder) { }
+  constructor(private _formBuilder: FormBuilder, private _dialog: MatDialog, private _priceCalcService: PriceCalculationsService) { }
 
   ngOnInit(): void {
     this.formGroup = this._formBuilder.group({
@@ -23,6 +27,11 @@ export class ApkCheckoutComponent implements OnInit {
     })
 
     this.formGroup.valueChanges.subscribe(console.log);
+
+    console.log('on checkout');
+    this._priceCalcService.priceBehaviorSubject.subscribe(x => {
+      this.calculatedPrice = x;
+    });
   }
 
   get name() {
@@ -46,7 +55,7 @@ export class ApkCheckoutComponent implements OnInit {
   }
 
   onSubmit() {
-
+    this._dialog.open(ApkDialogComponent);
   }
 
 }
